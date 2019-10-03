@@ -1,0 +1,469 @@
+{
+  "source": 2,
+  "revision": 17,
+  "description": null,
+  "createdBy": {
+    "displayName": "Alexis Garon-Michaud",
+    "url": "https://spsprodcca1.vssps.visualstudio.com/Ad32a3f64-6a7e-4adb-bc91-b2a8aa889089/_apis/Identities/4cc78e8c-db1b-438f-825f-81908ee29d4a",
+    "_links": { "avatar": { "href": "https://dev.azure.com/alexisgaronmichaud/_apis/GraphProfile/MemberAvatars/msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy" } },
+    "id": "4cc78e8c-db1b-438f-825f-81908ee29d4a",
+    "uniqueName": "alexis_35115@hotmail.com",
+    "imageUrl": "https://dev.azure.com/alexisgaronmichaud/_apis/GraphProfile/MemberAvatars/msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy",
+    "descriptor": "msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy"
+  },
+  "createdOn": "2019-09-29T19:28:12.317Z",
+  "modifiedBy": {
+    "displayName": "Alexis Garon-Michaud",
+    "url": "https://spsprodcca1.vssps.visualstudio.com/Ad32a3f64-6a7e-4adb-bc91-b2a8aa889089/_apis/Identities/4cc78e8c-db1b-438f-825f-81908ee29d4a",
+    "_links": { "avatar": { "href": "https://dev.azure.com/alexisgaronmichaud/_apis/GraphProfile/MemberAvatars/msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy" } },
+    "id": "4cc78e8c-db1b-438f-825f-81908ee29d4a",
+    "uniqueName": "alexis_35115@hotmail.com",
+    "imageUrl": "https://dev.azure.com/alexisgaronmichaud/_apis/GraphProfile/MemberAvatars/msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy",
+    "descriptor": "msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy"
+  },
+  "modifiedOn": "2019-09-30T23:33:19.767Z",
+  "isDeleted": false,
+  "lastRelease": {
+    "id": 28,
+    "name": "Release-28",
+    "artifacts": [],
+    "_links": {},
+    "description": "Triggered by TicTacToe-CI 71.",
+    "releaseDefinition": {
+      "id": 1,
+      "projectReference": null,
+      "_links": {}
+    },
+    "createdOn": "2019-10-02T12:44:01.580Z",
+    "createdBy": {
+      "displayName": "Alexis Garon-Michaud",
+      "url": "https://spsprodcca1.vssps.visualstudio.com/Ad32a3f64-6a7e-4adb-bc91-b2a8aa889089/_apis/Identities/4cc78e8c-db1b-438f-825f-81908ee29d4a",
+      "_links": { "avatar": { "href": "https://dev.azure.com/alexisgaronmichaud/_apis/GraphProfile/MemberAvatars/msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy" } },
+      "id": "4cc78e8c-db1b-438f-825f-81908ee29d4a",
+      "uniqueName": "alexis_35115@hotmail.com",
+      "imageUrl": "https://dev.azure.com/alexisgaronmichaud/_apis/GraphProfile/MemberAvatars/msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy",
+      "descriptor": "msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy"
+    }
+  },
+  "variables": {},
+  "variableGroups": [],
+  "environments": [
+    {
+      "id": 1,
+      "name": "Production - Firebase",
+      "rank": 2,
+      "owner": {
+        "displayName": "Alexis Garon-Michaud",
+        "url": "https://spsprodcca1.vssps.visualstudio.com/Ad32a3f64-6a7e-4adb-bc91-b2a8aa889089/_apis/Identities/4cc78e8c-db1b-438f-825f-81908ee29d4a",
+        "_links": { "avatar": { "href": "https://dev.azure.com/alexisgaronmichaud/_apis/GraphProfile/MemberAvatars/msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy" } },
+        "id": "4cc78e8c-db1b-438f-825f-81908ee29d4a",
+        "uniqueName": "alexis_35115@hotmail.com",
+        "imageUrl": "https://dev.azure.com/alexisgaronmichaud/_apis/GraphProfile/MemberAvatars/msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy",
+        "descriptor": "msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy"
+      },
+      "variables": {},
+      "variableGroups": [ 1 ],
+      "preDeployApprovals": {
+        "approvals": [
+          {
+            "rank": 1,
+            "isAutomated": false,
+            "isNotificationOn": false,
+            "approver": {
+              "displayName": "[TicTacToe]\\TicTacToe Team",
+              "url": "https://spsprodcca1.vssps.visualstudio.com/Ad32a3f64-6a7e-4adb-bc91-b2a8aa889089/_apis/Identities/7d9f4dcf-f867-4c63-9368-2dc00cba8196",
+              "_links": { "avatar": { "href": "https://dev.azure.com/alexisgaronmichaud/_apis/GraphProfile/MemberAvatars/vssgp.Uy0xLTktMTU1MTM3NDI0NS0zMTQyNjI1MzktMTE3MTM4NDE0My0yNTI0ODc4NjMzLTQyMTY1NjkzOTUtMS0xNDY2MjYyNjQxLTI5ODgyNDEyMTktMjQ2MjU2MjgzMi0yMTU5NTgwMjM5" } },
+              "id": "7d9f4dcf-f867-4c63-9368-2dc00cba8196",
+              "uniqueName": "vstfs:///Classification/TeamProject/0b44bb12-d145-4fe7-967e-9729fb53be33\\TicTacToe Team",
+              "imageUrl": "https://dev.azure.com/alexisgaronmichaud/_apis/GraphProfile/MemberAvatars/vssgp.Uy0xLTktMTU1MTM3NDI0NS0zMTQyNjI1MzktMTE3MTM4NDE0My0yNTI0ODc4NjMzLTQyMTY1NjkzOTUtMS0xNDY2MjYyNjQxLTI5ODgyNDEyMTktMjQ2MjU2MjgzMi0yMTU5NTgwMjM5",
+              "isContainer": true,
+              "descriptor": "vssgp.Uy0xLTktMTU1MTM3NDI0NS0zMTQyNjI1MzktMTE3MTM4NDE0My0yNTI0ODc4NjMzLTQyMTY1NjkzOTUtMS0xNDY2MjYyNjQxLTI5ODgyNDEyMTktMjQ2MjU2MjgzMi0yMTU5NTgwMjM5"
+            },
+            "id": 7
+          }
+        ],
+        "approvalOptions": {
+          "requiredApproverCount": null,
+          "releaseCreatorCanBeApprover": true,
+          "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+          "enforceIdentityRevalidation": false,
+          "timeoutInMinutes": 0,
+          "executionOrder": 1
+        }
+      },
+      "deployStep": { "id": 2 },
+      "postDeployApprovals": {
+        "approvals": [
+          {
+            "rank": 1,
+            "isAutomated": true,
+            "isNotificationOn": false,
+            "id": 3
+          }
+        ],
+        "approvalOptions": {
+          "requiredApproverCount": null,
+          "releaseCreatorCanBeApprover": false,
+          "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+          "enforceIdentityRevalidation": false,
+          "timeoutInMinutes": 0,
+          "executionOrder": 2
+        }
+      },
+      "deployPhases": [
+        {
+          "deploymentInput": {
+            "parallelExecution": { "parallelExecutionType": 0 },
+            "agentSpecification": { "identifier": "vs2017-win2016" },
+            "skipArtifactsDownload": false,
+            "artifactsDownloadInput": { "downloadInputs": [] },
+            "queueId": 82,
+            "demands": [],
+            "enableAccessToken": false,
+            "timeoutInMinutes": 0,
+            "jobCancelTimeoutInMinutes": 1,
+            "condition": "succeeded()",
+            "overrideInputs": {}
+          },
+          "rank": 1,
+          "phaseType": 1,
+          "name": "Agent job",
+          "refName": null,
+          "workflowTasks": [
+            {
+              "environment": {},
+              "taskId": "e213ff0f-5d5c-4791-802d-52ea3e7be1f1",
+              "version": "2.*",
+              "name": "PowerShell Script",
+              "refName": "",
+              "enabled": true,
+              "alwaysRun": false,
+              "continueOnError": false,
+              "timeoutInMinutes": 0,
+              "definitionType": "task",
+              "overrideInputs": {},
+              "condition": "succeeded()",
+              "inputs": {
+                "targetType": "filePath",
+                "filePath": "$(System.DefaultWorkingDirectory)/TicTacToe/drop/hosting.ps1",
+                "arguments": "-ci_token $(firebase_ci_token) -project_id $(firebase_projectId) -release_message $(Release.ReleaseName)",
+                "script": "npm i -g firebase-tools\nfirebase deploy --token \"1//0dd4iL9uTeSkPCgYIARAAGA0SNwF-L9IrTFwtXx1DU_5-VC7-9gtlcgK_QdYXwezHrBUGw1gOMQ7uXUTMlEKTk5kR6j-xihjI3Ac\" --project \"codewithfrenchyazuredevops\";\n",
+                "errorActionPreference": "stop",
+                "failOnStderr": "false",
+                "ignoreLASTEXITCODE": "false",
+                "pwsh": "false",
+                "workingDirectory": ""
+              }
+            }
+          ]
+        }
+      ],
+      "environmentOptions": {
+        "emailNotificationType": "OnlyOnFailure",
+        "emailRecipients": "release.environment.owner;release.creator",
+        "skipArtifactsDownload": false,
+        "timeoutInMinutes": 0,
+        "enableAccessToken": false,
+        "publishDeploymentStatus": true,
+        "badgeEnabled": false,
+        "autoLinkWorkItems": false,
+        "pullRequestDeploymentEnabled": false
+      },
+      "demands": [],
+      "conditions": [
+        {
+          "name": "Dev - on prem",
+          "conditionType": 2,
+          "value": "4"
+        }
+      ],
+      "executionPolicy": {
+        "concurrencyCount": 1,
+        "queueDepthCount": 0
+      },
+      "schedules": [],
+      "currentRelease": {
+        "id": 28,
+        "url": "https://vsrm.dev.azure.com/alexisgaronmichaud/0b44bb12-d145-4fe7-967e-9729fb53be33/_apis/Release/releases/28",
+        "_links": {}
+      },
+      "retentionPolicy": {
+        "daysToKeep": 30,
+        "releasesToKeep": 3,
+        "retainBuild": true
+      },
+      "processParameters": {},
+      "properties": {
+        "BoardsEnvironmentType": {
+          "$type": "System.String",
+          "$value": "unmapped"
+        },
+        "LinkBoardsWorkItems": {
+          "$type": "System.String",
+          "$value": "False"
+        }
+      },
+      "preDeploymentGates": {
+        "id": 0,
+        "gatesOptions": null,
+        "gates": []
+      },
+      "postDeploymentGates": {
+        "id": 0,
+        "gatesOptions": null,
+        "gates": []
+      },
+      "environmentTriggers": [],
+      "badgeUrl": "https://vsrm.dev.azure.com/alexisgaronmichaud/_apis/public/Release/badge/0b44bb12-d145-4fe7-967e-9729fb53be33/1/1"
+    },
+    {
+      "id": 2,
+      "name": "Dev - on prem",
+      "rank": 1,
+      "owner": {
+        "displayName": "Alexis Garon-Michaud",
+        "url": "https://spsprodcca1.vssps.visualstudio.com/Ad32a3f64-6a7e-4adb-bc91-b2a8aa889089/_apis/Identities/4cc78e8c-db1b-438f-825f-81908ee29d4a",
+        "_links": { "avatar": { "href": "https://dev.azure.com/alexisgaronmichaud/_apis/GraphProfile/MemberAvatars/msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy" } },
+        "id": "4cc78e8c-db1b-438f-825f-81908ee29d4a",
+        "uniqueName": "alexis_35115@hotmail.com",
+        "imageUrl": "https://dev.azure.com/alexisgaronmichaud/_apis/GraphProfile/MemberAvatars/msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy",
+        "descriptor": "msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy"
+      },
+      "variables": {},
+      "variableGroups": [],
+      "preDeployApprovals": {
+        "approvals": [
+          {
+            "rank": 1,
+            "isAutomated": true,
+            "isNotificationOn": false,
+            "id": 4
+          }
+        ],
+        "approvalOptions": {
+          "requiredApproverCount": null,
+          "releaseCreatorCanBeApprover": false,
+          "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+          "enforceIdentityRevalidation": false,
+          "timeoutInMinutes": 0,
+          "executionOrder": 1
+        }
+      },
+      "deployStep": { "id": 5 },
+      "postDeployApprovals": {
+        "approvals": [
+          {
+            "rank": 1,
+            "isAutomated": true,
+            "isNotificationOn": false,
+            "id": 6
+          }
+        ],
+        "approvalOptions": {
+          "requiredApproverCount": null,
+          "releaseCreatorCanBeApprover": false,
+          "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+          "enforceIdentityRevalidation": false,
+          "timeoutInMinutes": 0,
+          "executionOrder": 2
+        }
+      },
+      "deployPhases": [
+        {
+          "deploymentInput": {
+            "parallelExecution": { "parallelExecutionType": 0 },
+            "agentSpecification": { "identifier": "vs2017-win2016" },
+            "skipArtifactsDownload": false,
+            "artifactsDownloadInput": { "downloadInputs": [] },
+            "queueId": 82,
+            "demands": [],
+            "enableAccessToken": false,
+            "timeoutInMinutes": 0,
+            "jobCancelTimeoutInMinutes": 1,
+            "condition": "succeeded()",
+            "overrideInputs": {}
+          },
+          "rank": 1,
+          "phaseType": 1,
+          "name": "Agent job",
+          "refName": null,
+          "workflowTasks": [
+            {
+              "environment": {},
+              "taskId": "e213ff0f-5d5c-4791-802d-52ea3e7be1f1",
+              "version": "2.*",
+              "name": "PowerShell Script display hello to the user",
+              "refName": "",
+              "enabled": true,
+              "alwaysRun": false,
+              "continueOnError": false,
+              "timeoutInMinutes": 0,
+              "definitionType": "task",
+              "overrideInputs": {},
+              "condition": "succeeded()",
+              "inputs": {
+                "targetType": "inline",
+                "filePath": "",
+                "arguments": "",
+                "script": "Write-Host \"Hello mon beau Alexis, ta présentation est parfaite tu sais?\"\n",
+                "errorActionPreference": "stop",
+                "failOnStderr": "false",
+                "ignoreLASTEXITCODE": "false",
+                "pwsh": "false",
+                "workingDirectory": ""
+              }
+            }
+          ]
+        }
+      ],
+      "environmentOptions": {
+        "emailNotificationType": "OnlyOnFailure",
+        "emailRecipients": "release.environment.owner;release.creator",
+        "skipArtifactsDownload": false,
+        "timeoutInMinutes": 0,
+        "enableAccessToken": false,
+        "publishDeploymentStatus": true,
+        "badgeEnabled": false,
+        "autoLinkWorkItems": false,
+        "pullRequestDeploymentEnabled": false
+      },
+      "demands": [],
+      "conditions": [
+        {
+          "name": "ReleaseStarted",
+          "conditionType": 1,
+          "value": ""
+        }
+      ],
+      "executionPolicy": {
+        "concurrencyCount": 1,
+        "queueDepthCount": 0
+      },
+      "schedules": [],
+      "currentRelease": {
+        "id": 28,
+        "url": "https://vsrm.dev.azure.com/alexisgaronmichaud/0b44bb12-d145-4fe7-967e-9729fb53be33/_apis/Release/releases/28",
+        "_links": {}
+      },
+      "retentionPolicy": {
+        "daysToKeep": 30,
+        "releasesToKeep": 3,
+        "retainBuild": true
+      },
+      "processParameters": {},
+      "properties": {
+        "BoardsEnvironmentType": {
+          "$type": "System.String",
+          "$value": "unmapped"
+        },
+        "LinkBoardsWorkItems": {
+          "$type": "System.String",
+          "$value": "False"
+        }
+      },
+      "preDeploymentGates": {
+        "id": 0,
+        "gatesOptions": null,
+        "gates": []
+      },
+      "postDeploymentGates": {
+        "id": 0,
+        "gatesOptions": null,
+        "gates": []
+      },
+      "environmentTriggers": [],
+      "badgeUrl": "https://vsrm.dev.azure.com/alexisgaronmichaud/_apis/public/Release/badge/0b44bb12-d145-4fe7-967e-9729fb53be33/1/2"
+    }
+  ],
+  "artifacts": [
+    {
+      "sourceId": "0b44bb12-d145-4fe7-967e-9729fb53be33:5",
+      "type": "Build",
+      "alias": "TicTacToe",
+      "definitionReference": {
+        "artifactSourceDefinitionUrl": {
+          "id": "https://dev.azure.com/alexisgaronmichaud/_permalink/_build/index?collectionId=ba698982-57be-4095-966f-91f0430fbe5e&projectId=0b44bb12-d145-4fe7-967e-9729fb53be33&definitionId=5",
+          "name": ""
+        },
+        "defaultVersionBranch": {
+          "id": "",
+          "name": ""
+        },
+        "defaultVersionSpecific": {
+          "id": "",
+          "name": ""
+        },
+        "defaultVersionTags": {
+          "id": "",
+          "name": ""
+        },
+        "defaultVersionType": {
+          "id": "latestType",
+          "name": "Latest"
+        },
+        "definition": {
+          "id": "5",
+          "name": "TicTacToe-CI"
+        },
+        "definitions": {
+          "id": "",
+          "name": ""
+        },
+        "IsMultiDefinitionType": {
+          "id": "False",
+          "name": "False"
+        },
+        "project": {
+          "id": "0b44bb12-d145-4fe7-967e-9729fb53be33",
+          "name": "TicTacToe"
+        },
+        "repository": {
+          "id": "",
+          "name": ""
+        }
+      },
+      "isPrimary": true,
+      "isRetained": false
+    }
+  ],
+  "triggers": [
+    {
+      "artifactAlias": "TicTacToe",
+      "triggerConditions": [
+        {
+          "sourceBranch": "master",
+          "tags": [],
+          "tagFilter": null,
+          "useBuildDefinitionBranch": false,
+          "createReleaseOnBuildTagging": false
+        }
+      ],
+      "triggerType": 1
+    }
+  ],
+  "releaseNameFormat": "Release-$(rev:r)",
+  "tags": [],
+  "properties": {
+    "DefinitionCreationSource": {
+      "$type": "System.String",
+      "$value": "ReleaseNew"
+    },
+    "IntegrateBoardsWorkItems": {
+      "$type": "System.String",
+      "$value": "False"
+    },
+    "IntegrateJiraWorkItems": {
+      "$type": "System.String",
+      "$value": "false"
+    }
+  },
+  "id": 1,
+  "name": "TicTacToe-CD",
+  "path": "\\",
+  "projectReference": null,
+  "url": "https://vsrm.dev.azure.com/alexisgaronmichaud/0b44bb12-d145-4fe7-967e-9729fb53be33/_apis/Release/definitions/1",
+  "_links": {
+    "self": { "href": "https://vsrm.dev.azure.com/alexisgaronmichaud/0b44bb12-d145-4fe7-967e-9729fb53be33/_apis/Release/definitions/1" },
+    "web": { "href": "https://dev.azure.com/alexisgaronmichaud/0b44bb12-d145-4fe7-967e-9729fb53be33/_release?definitionId=1" }
+  }
+}

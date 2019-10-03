@@ -1,0 +1,353 @@
+{
+  "options": [
+    {
+      "enabled": false,
+      "definition": { "id": "5d58cc01-7c75-450c-be18-a388ddb129ec" },
+      "inputs": {
+        "branchFilters": "[\"+refs/heads/*\"]",
+        "additionalFields": "{}"
+      }
+    },
+    {
+      "enabled": false,
+      "definition": { "id": "a9db38f9-9fdc-478c-b0f9-464221e58316" },
+      "inputs": {
+        "workItemType": "Bug",
+        "assignToRequestor": "true",
+        "additionalFields": "{}"
+      }
+    }
+  ],
+  "triggers": [
+    {
+      "branchFilters": [ "+refs/heads/master" ],
+      "pathFilters": [],
+      "batchChanges": false,
+      "maxConcurrentBuildsPerBranch": 1,
+      "pollingInterval": 0,
+      "triggerType": 2
+    }
+  ],
+  "variables": {
+    "system.debug": {
+      "value": null,
+      "isSecret": true
+    }
+  },
+  "properties": {},
+  "tags": [],
+  "_links": {
+    "self": { "href": "https://dev.azure.com/alexisgaronmichaud/0b44bb12-d145-4fe7-967e-9729fb53be33/_apis/build/Definitions/5?revision=25" },
+    "web": { "href": "https://dev.azure.com/alexisgaronmichaud/0b44bb12-d145-4fe7-967e-9729fb53be33/_build/definition?definitionId=5" },
+    "editor": { "href": "https://dev.azure.com/alexisgaronmichaud/0b44bb12-d145-4fe7-967e-9729fb53be33/_build/designer?id=5&_a=edit-build-definition" },
+    "badge": { "href": "https://dev.azure.com/alexisgaronmichaud/0b44bb12-d145-4fe7-967e-9729fb53be33/_apis/build/status/5" }
+  },
+  "comment": "changement du path",
+  "jobAuthorizationScope": 1,
+  "jobTimeoutInMinutes": 60,
+  "jobCancelTimeoutInMinutes": 5,
+  "process": {
+    "phases": [
+      {
+        "steps": [
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "npm install",
+            "timeoutInMinutes": 5,
+            "condition": "succeeded()",
+            "task": {
+              "id": "fe47e961-9fa8-4106-8639-368c022d43ad",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "command": "install",
+              "workingDir": "TicTacToe",
+              "verbose": "false",
+              "customCommand": "",
+              "customRegistry": "useNpmrc",
+              "customFeed": "",
+              "customEndpoint": "",
+              "publishRegistry": "useExternalRegistry",
+              "publishFeed": "",
+              "publishPackageMetadata": "true",
+              "publishEndpoint": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "npm run vendor",
+            "timeoutInMinutes": 5,
+            "condition": "succeeded()",
+            "task": {
+              "id": "fe47e961-9fa8-4106-8639-368c022d43ad",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "command": "custom",
+              "workingDir": "TicTacToe",
+              "verbose": "false",
+              "customCommand": "run vendor",
+              "customRegistry": "useNpmrc",
+              "customFeed": "",
+              "customEndpoint": "",
+              "publishRegistry": "useExternalRegistry",
+              "publishFeed": "",
+              "publishPackageMetadata": "true",
+              "publishEndpoint": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "npm test",
+            "timeoutInMinutes": 5,
+            "condition": "succeeded()",
+            "task": {
+              "id": "fe47e961-9fa8-4106-8639-368c022d43ad",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "command": "custom",
+              "workingDir": "TicTacToe",
+              "verbose": "false",
+              "customCommand": "run test",
+              "customRegistry": "useNpmrc",
+              "customFeed": "",
+              "customEndpoint": "",
+              "publishRegistry": "useExternalRegistry",
+              "publishFeed": "",
+              "publishPackageMetadata": "true",
+              "publishEndpoint": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Publish Test Results",
+            "timeoutInMinutes": 5,
+            "condition": "succeeded()",
+            "task": {
+              "id": "0b0f01ed-7dde-43ff-9cbb-e48954daf9b1",
+              "versionSpec": "2.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "testRunner": "JUnit",
+              "testResultsFiles": "TESTS-*.xml",
+              "searchFolder": "$(Build.SourcesDirectory)/junit",
+              "mergeTestResults": "false",
+              "failTaskOnFailedTests": "false",
+              "testRunTitle": "",
+              "platform": "",
+              "configuration": "",
+              "publishRunAttachments": "true"
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Publish code coverage",
+            "timeoutInMinutes": 5,
+            "condition": "succeeded()",
+            "task": {
+              "id": "2a7ebc54-c13e-490e-81a5-d7561ab7cd97",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "codeCoverageTool": "Cobertura",
+              "summaryFileLocation": "$(Build.SourcesDirectory)/TicTacToe/coverage/myapp/cobertura-coverage.xml",
+              "pathToSources": "",
+              "reportDirectory": "",
+              "additionalCodeCoverageFiles": "",
+              "failIfCoverageEmpty": "false"
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "npm run build",
+            "timeoutInMinutes": 5,
+            "condition": "succeeded()",
+            "task": {
+              "id": "fe47e961-9fa8-4106-8639-368c022d43ad",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "command": "custom",
+              "workingDir": "TicTacToe",
+              "verbose": "false",
+              "customCommand": "run build-prod",
+              "customRegistry": "useNpmrc",
+              "customFeed": "",
+              "customEndpoint": "",
+              "publishRegistry": "useExternalRegistry",
+              "publishFeed": "",
+              "publishPackageMetadata": "true",
+              "publishEndpoint": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Publish firebase.json",
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "PathtoPublish": "TicTacToe/firebase.json",
+              "ArtifactName": "drop",
+              "ArtifactType": "Container",
+              "TargetPath": "",
+              "Parallel": "false",
+              "ParallelCount": "8",
+              "FileCopyOptions": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Publish Utils",
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "PathtoPublish": "TicTacToe/deploy",
+              "ArtifactName": "drop",
+              "ArtifactType": "Container",
+              "TargetPath": "",
+              "Parallel": "false",
+              "ParallelCount": "8",
+              "FileCopyOptions": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Publish Build",
+            "timeoutInMinutes": 5,
+            "condition": "succeeded()",
+            "task": {
+              "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "PathtoPublish": "TicTacToe/dist",
+              "ArtifactName": "drop/dist",
+              "ArtifactType": "Container",
+              "TargetPath": "",
+              "Parallel": "false",
+              "ParallelCount": "8",
+              "FileCopyOptions": ""
+            }
+          }
+        ],
+        "name": "Agent job 1",
+        "refName": "Job_1",
+        "condition": "succeeded()",
+        "target": {
+          "executionOptions": { "type": 0 },
+          "allowScriptsAuthAccessOption": false,
+          "type": 1
+        },
+        "jobAuthorizationScope": 1
+      }
+    ],
+    "target": { "agentSpecification": { "identifier": "vs2017-win2016" } },
+    "type": 1
+  },
+  "repository": {
+    "properties": {
+      "cleanOptions": "0",
+      "labelSources": "0",
+      "labelSourcesFormat": "$(build.buildNumber)",
+      "reportBuildStatus": "true",
+      "gitLfsSupport": "false",
+      "skipSyncSource": "false",
+      "checkoutNestedSubmodules": "false",
+      "fetchDepth": "0"
+    },
+    "id": "e73e2c49-ea73-40c1-a1d1-68f7df0edd09",
+    "type": "TfsGit",
+    "name": "TicTacToe",
+    "url": "https://dev.azure.com/alexisgaronmichaud/TicTacToe/_git/TicTacToe",
+    "defaultBranch": "refs/heads/master",
+    "clean": "false",
+    "checkoutSubmodules": false
+  },
+  "processParameters": {},
+  "quality": 1,
+  "authoredBy": {
+    "displayName": "Alexis Garon-Michaud",
+    "url": "https://spsprodcca1.vssps.visualstudio.com/Ad32a3f64-6a7e-4adb-bc91-b2a8aa889089/_apis/Identities/4cc78e8c-db1b-438f-825f-81908ee29d4a",
+    "_links": { "avatar": { "href": "https://dev.azure.com/alexisgaronmichaud/_apis/GraphProfile/MemberAvatars/msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy" } },
+    "id": "4cc78e8c-db1b-438f-825f-81908ee29d4a",
+    "uniqueName": "alexis_35115@hotmail.com",
+    "imageUrl": "https://dev.azure.com/alexisgaronmichaud/_apis/GraphProfile/MemberAvatars/msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy",
+    "descriptor": "msa.ZGNkNjkzNWQtMDkwMi03ZDJlLWI5ZDktOGRhMGQ4NTVjYjgy"
+  },
+  "drafts": [],
+  "queue": {
+    "_links": { "self": { "href": "https://dev.azure.com/alexisgaronmichaud/_apis/build/Queues/82" } },
+    "id": 82,
+    "name": "Azure Pipelines",
+    "url": "https://dev.azure.com/alexisgaronmichaud/_apis/build/Queues/82",
+    "pool": {
+      "id": 10,
+      "name": "Azure Pipelines",
+      "isHosted": true
+    }
+  },
+  "id": 5,
+  "name": "TicTacToe-CI",
+  "url": "https://dev.azure.com/alexisgaronmichaud/0b44bb12-d145-4fe7-967e-9729fb53be33/_apis/build/Definitions/5?revision=25",
+  "uri": "vstfs:///Build/Definition/5",
+  "path": "\\",
+  "type": 2,
+  "queueStatus": 0,
+  "revision": 25,
+  "createdDate": "2019-09-30T17:25:31.367Z",
+  "project": {
+    "id": "0b44bb12-d145-4fe7-967e-9729fb53be33",
+    "name": "TicTacToe",
+    "description": "Projet exemple pour présenter Azure DevOps aux étudiants",
+    "url": "https://dev.azure.com/alexisgaronmichaud/_apis/projects/0b44bb12-d145-4fe7-967e-9729fb53be33",
+    "state": 1,
+    "revision": 86,
+    "visibility": 0,
+    "lastUpdateTime": "2019-09-25T21:17:29.720Z"
+  }
+}
