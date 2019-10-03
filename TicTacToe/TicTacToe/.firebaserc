@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "codewithfrenchyazuredevops": {
+      "hosting": {
+        "myapp": [
+          "codewithfrenchyazuredevops"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "codewithfrenchyazuredevops"
+  }
+}
