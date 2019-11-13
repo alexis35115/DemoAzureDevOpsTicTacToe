@@ -26,6 +26,6 @@ describe('BoardComponent', () => {
 
   it('should display the right text on the `new game button`', () => {
     const button = fixture.debugElement.query(By.css('#btnNewGame'));
-    expect(button.nativeElement.textContent.trim()).toBe('Start new Game!');
+    expect(button.nativeElement.textContent.trim()).toBe('Start new Game!!');
   });
 });
